@@ -3,39 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucky Bloom (Balatro-like)</title>
+  <title>Lucky Bloom - Dopamine Balatro-like</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-glow"></div>
   <main class="app">
-    <header>
-      <h1>🌈 Lucky Bloom</h1>
-      <p>多巴胺可爱风 · Balatro-like 原创玩法</p>
+    <header class="topbar glass">
+      <div>
+        <h1>🎰 Lucky Bloom</h1>
+        <p>多巴胺可爱风 · 原创 Balatro-like</p>
+      </div>
+      <button id="newRunBtn" class="btn candy">新开一局</button>
     </header>
 
-    <section class="hud">
-      <div class="pill">关卡: <span id="round">1</span></div>
-      <div class="pill">目标分: <span id="target">300</span></div>
-      <div class="pill">当前分: <span id="score">0</span></div>
-      <div class="pill">手牌次数: <span id="handsLeft">4</span></div>
-      <div class="pill">弃牌次数: <span id="discardsLeft">3</span></div>
+    <section class="hud glass">
+      <article><span>关卡</span><b id="round">1</b></article>
+      <article><span>目标分</span><b id="target">300</b></article>
+      <article><span>当前分</span><b id="score">0</b></article>
+      <article><span>剩余出牌</span><b id="handsLeft">4</b></article>
+      <article><span>剩余弃牌</span><b id="discardsLeft">3</b></article>
+      <article><span>牌库余量</span><b id="deckLeft">52</b></article>
     </section>
 
-    <section class="joker-panel">
-      <h2>Joker 效果</h2>
-      <div id="jokers" class="jokers"></div>
-    </section>
+    <section class="board">
+      <aside class="panel glass">
+        <h2>🃏 Joker</h2>
+        <div id="jokers" class="jokers"></div>
+      </aside>
 
-    <section class="play-area">
-      <h2>你的手牌</h2>
-      <div id="hand" class="hand"></div>
-      <div class="actions">
-        <button id="playBtn">出牌</button>
-        <button id="discardBtn">弃牌</button>
-        <button id="newRunBtn">新开一局</button>
-      </div>
-      <div id="message" class="message"></div>
-      <div id="lastPlay" class="last-play"></div>
+      <section class="table glass">
+        <div class="table-head">
+          <h2>你的手牌</h2>
+          <p id="message">选 1~5 张牌后点击【出牌】</p>
+        </div>
+        <div id="hand" class="hand"></div>
+        <div class="actions">
+          <button id="playBtn" class="btn pop">出牌</button>
+          <button id="discardBtn" class="btn">弃牌</button>
+        </div>
+        <div id="lastPlay" class="last-play">准备开冲 ✨</div>
+        <div id="chipFx" class="chip-fx"></div>
+      </section>
     </section>
   </main>
 
