@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Bloom (Balatro-like)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>🌈 Lucky Bloom</h1>
+      <p>多巴胺可爱风 · Balatro-like 原创玩法</p>
+    </header>
+
+    <section class="hud">
+      <div class="pill">关卡: <span id="round">1</span></div>
+      <div class="pill">目标分: <span id="target">300</span></div>
+      <div class="pill">当前分: <span id="score">0</span></div>
+      <div class="pill">手牌次数: <span id="handsLeft">4</span></div>
+      <div class="pill">弃牌次数: <span id="discardsLeft">3</span></div>
+    </section>
+
+    <section class="joker-panel">
+      <h2>Joker 效果</h2>
+      <div id="jokers" class="jokers"></div>
+    </section>
+
+    <section class="play-area">
+      <h2>你的手牌</h2>
+      <div id="hand" class="hand"></div>
+      <div class="actions">
+        <button id="playBtn">出牌</button>
+        <button id="discardBtn">弃牌</button>
+        <button id="newRunBtn">新开一局</button>
+      </div>
+      <div id="message" class="message"></div>
+      <div id="lastPlay" class="last-play"></div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
